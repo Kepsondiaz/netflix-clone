@@ -1,0 +1,15 @@
+import React from 'react'
+
+const Navabar = () => {
+  return (
+    <div>
+        <h1>Netflix</h1>
+        <div>
+            <button>Sign</button>
+            <button></button>
+        </div>
+    </div>
+  )
+}
+
+export default Navabar
