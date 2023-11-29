@@ -23,12 +23,12 @@ const Row = ({title, fetchUrl, rowID}: Props) => {
 
     const slideLeft = () => {
         const slider = document.getElementById('slider' + rowID)
-        slider.scrollLeft = slider.scrollLeft - 500
+        slider!.scrollLeft = slider!.scrollLeft - 500
     } 
 
     const slideRight = () => {
         const slider = document.getElementById('slider' + rowID)
-        slider.scrollLeft = slider.scrollLeft + 500
+        slider!.scrollLeft = slider!.scrollLeft + 500
     } 
 
   return (
