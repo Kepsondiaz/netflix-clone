@@ -1,7 +1,7 @@
 # React + TypeScript + Firebase
 
 ## About the project
-simple netflix clone to improve my skill about frontend programmation using React(Typscrip), TailwindCss, Firebase (Auth, Firestore).
+simple netflix clone to improve my  front-end programming skills using React(Typscrip), TailwindCss, Firebase (Auth, Firestore).
 
 ## Instalation 
   `npm install`
