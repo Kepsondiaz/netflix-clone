@@ -1,7 +1,7 @@
 import { useState, createContext, useContext, useEffect, ReactNode } from "react";
-import {auth} from '../Firebase'
+import {auth, db} from '../Firebase'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, Auth, User, UserCredential } from "firebase/auth";
-
+import { setDoc, doc } from "firebase/firestore";
 
 interface Props {
     children: ReactNode
@@ -12,7 +12,6 @@ export interface AuthContextModel {
     user: User | null
     logIn: (email: string, password: string) => Promise<UserCredential>
     signUp: (email: string, password: string) => Promise<UserCredential>
-    sendPasswordResetEmail?: (email: string) => Promise<void>
     logOut: () => Promise<void>
   }
 
@@ -24,6 +23,9 @@ export function AuthContextProvider({children}: Props) {
     const [user, setUser] = useState<User | null>(null)
 
     function signUp(email: string, password: string): Promise<UserCredential> {
+        setDoc(doc(db, 'users', email), {
+            showMovies: []
+        })
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
