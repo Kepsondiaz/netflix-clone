@@ -31,11 +31,7 @@ const Navbar = () => {
               className="bg-red-600 text-white  px-6 py-2 rounded cursor-pointer">Logout</button>
         </div>
       ) : (
-          <div>
-            <Link to={'/login'}>
-                <button className="bg-red-600 text-white  px-6 py-2 rounded cursor-pointer">Sign In</button>
-            </Link>
-          </div>
+<p></p>
       )
     }
     </div>
