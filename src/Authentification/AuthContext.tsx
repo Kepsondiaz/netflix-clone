@@ -13,7 +13,7 @@ export interface AuthContextModel {
     logIn: (email: string, password: string) => Promise<UserCredential>
     signUp: (email: string, password: string) => Promise<UserCredential>
     sendPasswordResetEmail?: (email: string) => Promise<void>
-    logOut?: () => Promise<void>
+    logOut: () => Promise<void>
   }
 
   const AuthContext = createContext<AuthContextModel>(
