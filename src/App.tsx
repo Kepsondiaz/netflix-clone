@@ -6,6 +6,7 @@ import Singup from './pages/Singup'
 import Login from './pages/Login'
 import Account from './pages/Account'
 import ProtectedRoute from './components/ProtectedRoute'
+import Index from './pages/Index'
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       <AuthContextProvider >
             <Navbar/>
             <Routes>
-                <Route path='/' element={<ProtectedRoute><Home /></ProtectedRoute>} />
+                <Route path='/home' element={<ProtectedRoute><Home /></ProtectedRoute>} />
+                <Route path='/' element={<Index />} />
                 <Route path='/signup' element={<Singup />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/account' element={<ProtectedRoute><Account /></ProtectedRoute> } />
