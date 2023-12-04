@@ -17,7 +17,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex items-center justify-around p-4 z-[100] w-full absolute">
+    <div className="flex fixed items-center justify-around p-4 z-[100] w-full">
       <Link to="/">
           <img className="w-32" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="netflix logo" />
       </Link>
@@ -31,7 +31,9 @@ const Navbar = () => {
               className="bg-red-600 text-white  px-6 py-2 rounded cursor-pointer">Logout</button>
         </div>
       ) : (
-<p></p>
+        <Link to={'/login'}>
+          <button className="bg-red-600 text-white  px-6 py-2 rounded cursor-pointer">Sign In</button>
+        </Link>
       )
     }
     </div>
