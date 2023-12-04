@@ -15,7 +15,7 @@ const Singup = () => {
         e.preventDefault()
         try {
             await signUp(email, password)
-            navigation('/')
+            navigation('/home')
         } catch (error) {
             console.log(error)
         }
